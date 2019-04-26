@@ -20,7 +20,7 @@ const props = {
     emptyBut: true,
     valueField: "refpk",
     displayField: "{refname}",
-    className:'ref-walsin-modal',
+    // className:'ref-walsin-modal',
 }
 class Demo1 extends Component {
 
