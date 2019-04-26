@@ -255,7 +255,7 @@ class RefFilterTableBaseUI extends Component {
     render() {
         const _this = this;
         let { className,title = '', backdrop, size = 'lg',
-            showModal, lang = 'zh_CN', valueField, emptyBut = false, buttons, fliterColumn = [],
+            showModal, lang = 'zh_CN', valueField, emptyBut = false, buttons, filterColumn = [],
             showLoading, tableData, pageCount, currPageIndex,
             columnsData, totalElements, theme = 'ref-red',onFilterChange=()=>{} } = this.props;
         let { checkedArray, checkedMap } = this;
@@ -328,7 +328,7 @@ class RefFilterTableBaseUI extends Component {
                             showFilterMenu: true,
                             onFilterChange:onFilterChange,
                             filterDelay: 500,//输入文本多少ms触发回调函数，默认500m,
-                            filterable: Boolean(fliterColumn.length),//是否开启过滤数据功,
+                            filterable: Boolean(filterColumn.length),//是否开启过滤数据功,
                         }) :
                             <RefCoreError show={!Boolean(_tableData.length)} language={lang} />
                     }
