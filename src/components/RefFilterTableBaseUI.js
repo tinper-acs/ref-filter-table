@@ -273,7 +273,7 @@ class RefFilterTableBaseUI extends Component {
         return (
             <Modal
                 show={showModal}
-                className={` ${theme} ${className} ref-walsin-modal ref-core ref-multiple-table ref-core-modal`}
+                className={` ${theme} ${className} ref-core ref-filter-table ref-core-modal`}
                 backdrop={backdrop}
                 size={size}
                 onHide={this.handleBtnCancel}
@@ -285,7 +285,7 @@ class RefFilterTableBaseUI extends Component {
                 <Modal.Body ref={(ref) => this.modalRef = ref}>
                     <Loading container={this.modalRef} show={showLoading} />
                     <RefCoreTab
-                        className="ref-multiple-table-tab"
+                        className="ref-filter-table-tab"
                         selectedData={checkedArray}
                         selectedDataLength={selectedDataLength}
                         selecteing={tableIsSelecting}
@@ -302,7 +302,7 @@ class RefFilterTableBaseUI extends Component {
                                 next
                                 showJump={true}
                                 boundaryLinks
-                                className={pageCount > 1 ? '' : `ref-multiple-table-pagination-hide`}
+                                className={pageCount > 1 ? '' : `ref-filter-table-pagination-hide`}
                                 items={pageCount}
                                 maxButtons={5}
                                 total={totalElements}

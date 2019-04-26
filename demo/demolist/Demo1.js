@@ -1,11 +1,11 @@
 /**
  *
  * @title 行内搜索表格参照示例1
- * @description 使用RefMultipleTableWalsinBaseUI,不带有input
+ * @description 使用RefFilterTableBaseUI,不带有input
  *
  */
 import React, { Component } from 'react';
-import RefMultipleTableWalsinBaseUI from '../../src/index';
+import RefFilterTableBaseUI from '../../src/index';
 import  '../../src/index.less';
 
 import { Button, Form } from 'tinper-bee';
@@ -167,7 +167,7 @@ class Demo1 extends Component {
         this.getFilterColumn()
         return (
             <div className="demoPadding">
-                <RefMultipleTableWalsinBaseUI
+                <RefFilterTableBaseUI
                     {...childrenProps}
                     matchData={this.state.matchData}
                     onFilterChange={this.onFilterChange}

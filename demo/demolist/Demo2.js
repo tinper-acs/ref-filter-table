@@ -5,7 +5,7 @@
  *
  */
 import React, { Component } from 'react';
-import { Button, Form } from 'tinper-bee';
+import { Button, Form, Radio } from 'tinper-bee';
 import { RefFilterTableWithInput }  from '../../src/index';
 import  '../../src/index.less';
 let props = {
@@ -46,7 +46,7 @@ let props = {
         filterDropdownIncludeKeys: ['LIKE', 'ULIKE', 'EQ']
     }],
     showLoading:false,
-    className:'ref-walsin-modal',
+    // className:'ref-walsin-modal',
 }
 class Demo2 extends Component {
     onSave = (item) => {
@@ -84,7 +84,15 @@ class Demo2 extends Component {
 				key: "a",
 				width: 45,
 				render(text, record, index) {
-					return <div className={`ref-multiple-table-radio ${record._checked ? 'ref-multiple-table-radio-on' : ''}`}/>//record._checked ? // <Icon className="uf-correct" style={{color: '#0558f5'}}/> : ''
+                    return(
+						<Radio.RadioGroup
+							name={record[props.valueField]}
+							selectedValue={record._checked?record[props.valueField]:null}
+						>
+							<Radio value={record[props.valueField]}></Radio>
+						</Radio.RadioGroup>   
+					)
+					// return <div className={`ref-multiple-table-radio ${record._checked ? 'ref-multiple-table-radio-on' : ''}`}/>//record._checked ? // <Icon className="uf-correct" style={{color: '#0558f5'}}/> : ''
 				}
 			})
 			

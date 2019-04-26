@@ -1,8 +1,45 @@
 
 
- @import './theme-red.css';
+//  @import './theme-red.css';
  @import './components/RefFilterTableBaseUI.less';
  
+
+.ref-filter-table{
+    //主题-红色
+    &.ref-red{
+        .selectedItemSum{
+            color:#f53c32;
+        }
+        .ref-core-button-empty{
+            color:#f53c32!important;
+        }
+        .ref-filter-table-row-selected{
+            background-color: #FFF7E7;
+        }
+        .u-table tr:hover{
+            background: #EBECF0;
+        }
+    }
+    // 主题-蓝色
+    &.ref-blue{
+        .selectedItemSum{
+            color:#1e88e5;
+        }
+        .ref-core-button-empty{
+            color:#1e88e5;
+        }
+        .u-table tr:hover{
+            background: #EBECF0;
+        }
+        .ref-filter-table-row-selected{
+            background-color: #DEEBFF;
+        }
+    }
+    .u-radio-group {
+        position: relative;
+        display: block;
+    }
+}
  .ref-walsin-modal{
      &.ref-core .u-table{
          padding: 0;
