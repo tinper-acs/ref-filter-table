@@ -257,7 +257,7 @@ class RefFilterTableBaseUI extends Component {
         let { className,title = '', backdrop, size = 'lg',
             showModal, lang = 'zh_CN', valueField, emptyBut = false, buttons, filterColumn = [],
             showLoading, tableData, pageCount, currPageIndex,
-            columnsData, totalElements, theme = 'ref-red',onFilterChange=()=>{} } = this.props;
+            columnsData, totalElements, theme = 'ref-red',onFilterChange=()=>{},onFilterClear=()=>{} } = this.props;
         let { checkedArray, checkedMap } = this;
         let { selectedDataLength, tableIsSelecting } = this.state;
         let _tableData = tableData.map(item => {
@@ -327,6 +327,7 @@ class RefFilterTableBaseUI extends Component {
                             columnFilterAble: false,
                             showFilterMenu: true,
                             onFilterChange:onFilterChange,
+                            onFilterClear:onFilterClear,
                             filterDelay: 500,//输入文本多少ms触发回调函数，默认500m,
                             filterable: Boolean(filterColumn.length),//是否开启过滤数据功,
                         }) :

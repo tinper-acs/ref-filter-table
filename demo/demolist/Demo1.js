@@ -20,7 +20,7 @@ const props = {
     emptyBut: true,
     valueField: "refpk",
     displayField: "{refname}",
-    // className:'ref-walsin-modal',
+    className:'ref-walsin-modal',
 }
 class Demo1 extends Component {
 
@@ -139,7 +139,11 @@ class Demo1 extends Component {
 
     }
     onFilterChange = (field,value,condition) =>{
+       
         alert(`field=${field},value=${value},condition=${condition}`)
+    }
+    onFilterClear = (field) =>{
+        alert(field)
     }
     render() {
         let { showLoading, showModal } = this.state;
@@ -162,7 +166,8 @@ class Demo1 extends Component {
             searchFilterInfo: searchFilterInfo,
             onSave: this.onSave,
             onCancel: this.onCancel,
-            filterColumn:this.filterColumn,            
+            filterColumn:this.filterColumn,   
+            onFilterClear:this.onFilterClear,         
         });
         this.getFilterColumn()
         return (

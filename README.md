@@ -64,7 +64,8 @@ valueField |``string``|'refcode' |待提交的 value 的键。 | 否
 searchFilterInfo | `function(value)`| 复杂搜索的查询回调，将搜索条件带回| 否
 showLoading | `bool` | false | 是否展示loading，多用于请求中| 否
 <span style="color:red;">*</span>filterColumn| `Array`| -- | 过滤条件。具体使用请参照bee-table| 否
-<span style="color:red;">*</span>onFilterChange| `function(field,value,condition)`| -- | 过滤的回调函数，具体使用请参照bee-table| 否
+<span style="color:red;">*</span>onFilterChange| `function(field,value,condition)`| -- | 触发过滤输入操作以及下拉条件的回调| 否
+<span style="color:red;">*</span>onFilterClear| `function(field)`| -- | 清除过滤条件的回调函数，回调参数为清空的字段| 否
 <span style="color:red;">*</span>tableData | `Array` | — | 表体数据 | 否
 <span style="color:red;">*</span>columsData | `Array`| — | 表头数据 | 否
 pageCount |`number`| — |总页数 | 否
