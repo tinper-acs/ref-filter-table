@@ -1,6 +1,6 @@
 {
   "name": "ref-filter-table",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "",
   "main": "lib/index.js",
   "scripts": {
@@ -101,7 +101,7 @@
     "prop-types": "^15.6.0"
   },
   "dependencies": {
-    "ref-core": "^0.3.4-beta.4",
+    "ref-core": "^0.2.8",
     "bee-checkbox": "^2.0.5",
     "bee-form": "^2.0.11",
     "bee-label": "^1.0.0",
